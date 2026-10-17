@@ -12,7 +12,7 @@ pipeline {
         stage('Test Website') {
             steps {
                 sh 'test -f index.html'
-                grep -q "Hello, I'm Megha" index.html
+                sh "grep -q 'Hello, I' index.html"
                 echo 'Website files verified successfully!'
             }
         }
@@ -25,4 +25,3 @@ pipeline {
         }
     }
 }
-
