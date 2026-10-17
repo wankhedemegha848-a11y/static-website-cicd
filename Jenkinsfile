@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'test -f index.html'
                 sh "grep -q 'Hello, I' index.html"
-                echo 'Website files verified successfully!'
+                echo 'Website file exists and is ready to deploy!'
             }
         }
 
